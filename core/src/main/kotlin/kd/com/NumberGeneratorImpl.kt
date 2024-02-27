@@ -1,20 +1,34 @@
 package kd.com
 
+import kd.com.qualifiers.MaxNumber
+import kd.com.qualifiers.MinNumber
+import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.stereotype.Component
 import java.util.*
 
+@Component
 class NumberGeneratorImpl : NumberGenerator {
 
-    //private final Random random = new Random();
-    val random = Random()
+    private val random = Random()
+
+    private var maxNumber: Int
+    private var minNumber: Int
+
+    @Autowired
+    constructor(@MaxNumber maxNumber: Int,@MinNumber minNumber: Int) {
+        this.maxNumber = maxNumber
+        this.minNumber = minNumber
+    }
+
     override fun getMaxNumber(): Int {
-        TODO("Not yet implemented")
+        return maxNumber
     }
 
     override fun getMinNumber(): Int {
-        TODO("Not yet implemented")
+        return minNumber
     }
 
     override fun nextNumber(): Int {
-        TODO("Not yet implemented")
+        return random.nextInt(maxNumber)
     }
 }
