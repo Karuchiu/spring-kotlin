@@ -9,9 +9,10 @@ import org.springframework.context.annotation.ComponentScan
 import org.springframework.context.annotation.Configuration
 import org.springframework.context.annotation.PropertySource
 
-@Configuration
+@Configuration(proxyBeanMethods = false)
 @PropertySource("classpath:config/game.properties")
 @ComponentScan(basePackages = ["kd.com"])
+
 class GameConfig {
 
     @Value("\${game.guessCount}")
@@ -23,21 +24,21 @@ class GameConfig {
     @Value("\${game.minNumber}")
     private var minNumber = 0
 
-    @GuessCount
     @Bean
-    fun guessCount(): Int {
+    @GuessCount
+    fun guessCountBean(): Int {
         return guessCount
     }
 
     @Bean
     @MaxNumber
-    fun maxNumber(): Int {
+    fun maxNumberBean(): Int {
         return maxNumber
     }
 
     @Bean
     @MinNumber
-    fun minNumber(): Int {
+    fun minNumberBean(): Int {
         return minNumber
     }
 }

@@ -9,18 +9,12 @@ import javax.annotation.PostConstruct
 import javax.annotation.PreDestroy
 
 @Component
-class GameImpl : Game {
+class GameImpl(
+    private var numberGenerator: NumberGenerator,
+    @GuessCount private var guessCount: Int
+) : Game {
     companion object {
         val log: Logger = LoggerFactory.getLogger(GameImpl::class.java)
-    }
-
-    private var numberGenerator: NumberGenerator
-    private var guessCount: Int
-
-    @Autowired
-    constructor(numberGenerator: NumberGenerator, @GuessCount guessCount: Int) {
-        this.numberGenerator = numberGenerator
-        this.guessCount = guessCount
     }
 
     private var number: Int = 0

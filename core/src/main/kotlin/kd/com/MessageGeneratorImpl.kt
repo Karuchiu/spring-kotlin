@@ -7,24 +7,18 @@ import org.springframework.stereotype.Component
 import javax.annotation.PostConstruct
 
 @Component
-class MessageGeneratorImpl : MessageGenerator {
+class MessageGeneratorImpl(
+    private var game: Game
+) : MessageGenerator {
 
     companion object {
         val log: Logger = LoggerFactory.getLogger(MessageGeneratorImpl::class.java)
-    }
-
-    private var game: Game
-
-    @Autowired
-    constructor(game: Game) {
-        this.game = game
     }
 
     @PostConstruct
     fun init() {
         log.info("Value of game is {}", game)
     }
-
 
     override fun getMainMessage(): String {
         return "Number is between " +

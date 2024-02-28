@@ -7,18 +7,12 @@ import org.springframework.stereotype.Component
 import java.util.*
 
 @Component
-class NumberGeneratorImpl : NumberGenerator {
+class NumberGeneratorImpl(
+    @MaxNumber private var maxNumber: Int,
+    @MinNumber private var minNumber: Int
+) : NumberGenerator {
 
     private val random = Random()
-
-    private var maxNumber: Int
-    private var minNumber: Int
-
-    @Autowired
-    constructor(@MaxNumber maxNumber: Int,@MinNumber minNumber: Int) {
-        this.maxNumber = maxNumber
-        this.minNumber = minNumber
-    }
 
     override fun getMaxNumber(): Int {
         return maxNumber
