@@ -15,7 +15,7 @@ class ConsoleNumberGuess(
 ) {
 
     companion object {
-        val log: Logger = LoggerFactory.getLogger(Main::class.java)
+        val log: Logger = LoggerFactory.getLogger(ConsoleNumberGuess::class.java)
     }
 
     @EventListener(ContextRefreshedEvent::class)
