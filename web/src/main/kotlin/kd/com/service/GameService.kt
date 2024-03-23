@@ -1,4 +1,4 @@
-package kd.com
+package kd.com.service
 
 interface GameService {
 

@@ -1,8 +1,7 @@
-package kd.com.util
+package kd.com.service
 
 import jakarta.annotation.PostConstruct
 import kd.com.Game
-import kd.com.GameService
 import kd.com.MessageGenerator
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
