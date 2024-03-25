@@ -9,10 +9,10 @@
         <h1>
             Guess the Number Game
         </h1>
-        <h3 th:text="${mainMessage}">Main Message</h3>
+        <h3 th:text="${mainMessage}"></h3>
         <h3 th:text="${resultMessage}">Result Message</h3>
 
-        <form action="play.html" method="post">
+        <form action="play" method="post">
             <label for="guess">Enter your guess</label>
             <input type="number" id="guess" name="guess">
             <input type="submit" value="Submit">
