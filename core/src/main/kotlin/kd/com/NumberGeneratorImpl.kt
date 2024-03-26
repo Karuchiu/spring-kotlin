@@ -23,6 +23,6 @@ class NumberGeneratorImpl(
     }
 
     override fun nextNumber(): Int {
-        return random.nextInt(maxNumber)
+        return random.nextInt(maxNumber - minNumber) + minNumber
     }
 }
