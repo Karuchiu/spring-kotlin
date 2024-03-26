@@ -39,4 +39,10 @@ class AppController(
         gameService.checkGuess(guess)
         return GameMappings.REDIRECT_PLAY
     }
+
+    @GetMapping(GameMappings.RESTART)
+    fun restart(): String {
+        gameService.reset()
+        return GameMappings.REDIRECT_PLAY
+    }
 }
