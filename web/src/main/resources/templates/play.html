@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head id="headerId">
     <title></title>
 </head>
@@ -8,8 +8,8 @@
         <h1>
             Guess the Number Game
         </h1>
-        <h3 th:text="${mainMessage}"></h3>
-        <h3 th:text="${resultMessage}">Result Message</h3>
+        <h3 id="mainMsg"></h3>
+        <h3 id="resultMsg">Result Message</h3>
 
         <form action="play" method="post">
             <label for="guess">Enter your guess</label>
@@ -17,7 +17,7 @@
             <input type="submit" value="Submit">
         </form>
 
-        <footer th:replace="~{fragments/footer :: footerFragment}"></footer>
+        <footer id="footer"></footer>
 
     </div>
 
