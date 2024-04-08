@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="~{fragments/head :: headFragment}">
+<head id="headerId">
     <meta charset="UTF-8">
-    <title>Home</title>
+    <title></title>
 </head>
 <body>
     <div style="text-align: center;">
@@ -10,10 +10,10 @@
             Welcome to the Number Game
         </h1>
         <h3>
-            <a th:text="Cheza" th:href="play"></a>
+            <a id="chezaLink"></a>
         </h3>
 
-        <footer th:replace="~{fragments/footer :: footerFragment}"></footer>
+        <footer id="footer"></footer>
 
     </div>
 
