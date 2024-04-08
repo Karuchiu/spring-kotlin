@@ -1,0 +1,7 @@
+<thlogic>
+    <attr sel="#headerId" th:replace="~{fragments/head :: headFragment}"/>
+    <attr sel="#footer" th:replace="~{fragments/footer :: footerFragment}"/>
+    <attr sel="#resultMsg" th:text="${resultMessage}"/>
+    <attr sel="#restartLink" th:text="'Play Again'" th:href="restart"/>
+    <attr sel="#homeLink" th:text="Home" th:href="'/'"/>
+</thlogic>
