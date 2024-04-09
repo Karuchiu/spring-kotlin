@@ -2,6 +2,8 @@
     <attr sel="#headerId" th:replace="~{fragments/head :: headFragment}"/>
     <attr sel="#footer" th:replace="~{fragments/footer :: footerFragment}"/>
     <attr sel="#resultMsg" th:text="${resultMessage}"/>
-    <attr sel="#restartLink" th:text="'Play Again'" th:href="restart"/>
-    <attr sel="#homeLink" th:text="Home" th:href="'/'"/>
+    <attr sel="#h1Text" th:text="#{game.title}"/>
+    <attr sel="#overText" th:text="#{game.over}"/>
+    <attr sel="#restartLink" th:text="#{game.playAgain}" th:href="restart"/>
+    <attr sel="#homeLink" th:text="#{game.home}" th:href="'/'"/>
 </thlogic>
